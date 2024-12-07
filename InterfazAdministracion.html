@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrativo</title>
+    <link rel="stylesheet" href="IntAd.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Panel</h2>
+        <ul>
+            <li>
+                <a href="#" class="menu-toggle">Cargar Data</a>
+                <ul class="submenu">
+                    <li><a href="#" data-target="form-productos">Cargar Productos</a></li>
+                    <li><a href="#" data-target="form-categorias">Cargar Categorías</a></li>
+                    <li><a href="#" data-target="form-resenas">Cargar Reseñas</a></li>
+                </ul>
+            </li>
+            <li><a href="#" data-target="form-agregar-producto">Agregar Producto</a></li>
+            <li><a href="#" data-target="form-editar-producto">Editar Producto</a></li>
+            <li><a href="#" data-target="form-recomendaciones">Recomendación</a></li>
+            <li><a href="#">Chat Bot</a></li>
+            <li><a href="#">Análisis de Métricas</a></li>
+            <li><a href="#">Parametrización del Bot</a></li>
+            <li><a href="#" data-target="form-configuracion">Configuración</a></li>
+        </ul>
+        <button class="logout-btn">Cerrar Sesión</button>
+    </div>
+
+    <!-- Formularios -->
+    <div id="form-productos" class="form-container">
+        <h3>Cargar Productos</h3>
+        <form>
+            <label for="uploader">Personal encargado:</label>
+            <input type="text" id="uploader" name="uploader" placeholder="Nombre Completo">
+            <label for="upload-date">Fecha de subida:</label>
+            <input type="date" id="upload-date" name="upload-date">
+            <label for="file-upload">Subir archivo:</label>
+            <div class="file-upload-box">
+                <i class="fa fa-cloud-upload-alt"></i>
+                <p>Arrastre y suelte los archivos aquí</p>
+                <label for="file-upload">Buscar archivo</label>
+                <input type="file" id="file-upload" name="file-upload">
+            </div>
+            <button type="button" class="upload-btn">Actualizar</button>
+        </form>
+    </div>
+
+    <div id="form-categorias" class="form-container">
+        <h3>Cargar Categorías</h3>
+        <form>
+            <label for="uploader">Personal encargado:</label>
+            <input type="text" id="uploader" name="uploader" placeholder="Nombre Completo">
+            <label for="upload-date">Fecha de subida:</label>
+            <input type="date" id="upload-date" name="upload-date">
+            <label for="file-upload">Subir archivo:</label>
+            <div class="file-upload-box">
+                <i class="fa fa-cloud-upload-alt"></i>
+                <p>Arrastre y suelte los archivos aquí</p>
+                <label for="file-upload">Buscar archivo</label>
+                <input type="file" id="file-upload" name="file-upload">
+            </div>
+            <button type="button" class="upload-btn">Actualizar</button>
+        </form>
+    </div>
+
+    <div id="form-resenas" class="form-container">
+        <h3>Cargar Reseñas</h3>
+        <form>
+            <label for="uploader">Personal encargado:</label>
+            <input type="text" id="uploader" name="uploader" placeholder="Nombre Completo">
+            <label for="upload-date">Fecha de subida:</label>
+            <input type="date" id="upload-date" name="upload-date">
+            <label for="file-upload">Subir archivo:</label>
+            <div class="file-upload-box">
+                <i class="fa fa-cloud-upload-alt"></i>
+                <p>Arrastre y suelte los archivos aquí</p>
+                <label for="file-upload">Buscar archivo</label>
+                <input type="file" id="file-upload" name="file-upload">
+            </div>
+            <button type="button" class="upload-btn">Actualizar</button>
+        </form>
+    </div>
+
+    <div id="form-agregar-producto" class="form-container">
+        <h3>Agregar Producto</h3>
+        <form>
+            <label for="product-name">Nombre del Producto:</label>
+            <input type="text" id="product-name" name="product-name" placeholder="Escribe el nombre del producto">
+            <label for="product-description">Descripción:</label>
+            <textarea id="product-description" name="product-description" placeholder="Escribe una descripción"></textarea>
+            <label for="product-category">Categoría:</label>
+            <select id="product-category" name="product-category">
+                <option value="" disabled selected>Selecciona una categoría</option>
+                <option value="electronics">Electrónica</option>
+                <option value="fashion">Moda</option>
+                <option value="home">Hogar</option>
+                <option value="sports">Deportes</option>
+            </select>
+            <label for="product-price">Precio:</label>
+            <input type="number" id="product-price" name="product-price" placeholder="Precio en USD" step="0.01">
+            <label for="product-stock">Cantidad en Inventario:</label>
+            <input type="number" id="product-stock" name="product-stock" placeholder="Cantidad disponible">
+            <label for="product-image">Imagen del Producto:</label>
+            <div class="file-upload-box">
+                <i class="fa fa-cloud-upload-alt"></i>
+                <p>Arrastre y suelte la imagen aquí</p>
+                <label for="product-image">Buscar archivo</label>
+                <input type="file" id="product-image" name="product-image">
+            </div>
+            <button type="submit" class="save-btn">Guardar Producto</button>
+            <button type="button" class="cancel-btn">Cancelar</button>
+        </form>
+    </div>
+
+    <div id="form-editar-producto" class="form-container">
+        <h3>Editar Producto</h3>
+        <form>
+            <!-- Buscar producto -->
+            <label for="search-product">Buscar Producto (ID o Nombre):</label>
+            <input type="text" id="search-product" name="search-product" placeholder="ID o Nombre del Producto" required>
+    
+            <!-- Detalles del producto -->
+            <label for="edit-product-name">Nombre del Producto:</label>
+            <input type="text" id="edit-product-name" name="edit-product-name" placeholder="Nombre del Producto" required>
+    
+            <label for="edit-product-price">Precio del Producto:</label>
+            <input type="number" id="edit-product-price" name="edit-product-price" placeholder="Precio" required>
+    
+            <label for="edit-product-category">Categoría:</label>
+            <select id="edit-product-category" name="edit-product-category" required>
+                <option value="" disabled selected>Seleccione una categoría</option>
+                <option value="electronics">Electrónica</option>
+                <option value="fashion">Moda</option>
+                <option value="home">Hogar</option>
+            </select>
+    
+            <label for="edit-product-description">Descripción:</label>
+            <textarea id="edit-product-description" name="edit-product-description" rows="4" placeholder="Descripción del Producto"></textarea>
+    
+            <!-- Botones -->
+            <button type="submit" class="upload-btn">Guardar Cambios</button>
+            <button type="button" class="cancel-btn">Cancelar</button>
+        </form>
+    </div>
+
+    <div id="form-recomendaciones" class="form-container">
+        <h3>Gestión del Sistema de Recomendaciones</h3>
+    
+        <!-- Evaluación del sistema -->
+        <section class="evaluation-section">
+            <h4>Métricas del Sistema</h4>
+            <ul>
+                <li>Precisión del sistema: <span id="precision">85%</span></li>
+                <li>Interacciones totales: <span id="interactions">1200</span></li>
+                <li>Tasa de conversión: <span id="conversion">12%</span></li>
+            </ul>
+        </section>
+    
+        <!-- Configuración del algoritmo -->
+        <section class="config-section">
+            <h4>Configuración del Algoritmo</h4>
+            <form>
+                <label for="model-type">Modelo:</label>
+                <select id="model-type" name="model-type">
+                    <option value="collaborative">Filtrado colaborativo</option>
+                    <option value="content">Basado en contenido</option>
+                    <option value="hybrid">Híbrido</option>
+                </select>
+    
+                <label for="recommendation-limit">Límite de recomendaciones:</label>
+                <input type="number" id="recommendation-limit" name="recommendation-limit" min="1" value="10">
+    
+                <button type="button" class="save-config-btn">Guardar Configuración</button>
+            </form>
+        </section>
+    
+        <!-- Gestión de recomendaciones -->
+        <section class="manual-management-section">
+            <h4>Gestión Manual</h4>
+            <button class="add-recommendation-btn">Añadir Recomendación</button>
+            <ul id="recommendation-list">
+                <li>Producto: Smartphone X - Prioridad: Alta</li>
+                <li>Producto: Lámpara LED - Prioridad: Media</li>
+            </ul>
+        </section>
+    </div>
+
+    <div id="form-configuracion" class="form-container">
+        <h3>Configuración del Sistema</h3>
+    
+        <!-- Configuración General -->
+        <section class="general-settings">
+            <h4>Configuración General</h4>
+            <form>
+                <label for="system-name">Nombre del sistema:</label>
+                <input type="text" id="system-name" placeholder="Ingrese el nombre del sistema">
+    
+                <label for="timezone">Zona horaria:</label>
+                <select id="timezone">
+                    <option value="UTC">UTC</option>
+                    <option value="EST">EST (UTC-5)</option>
+                    <option value="PST">PST (UTC-8)</option>
+                </select>
+    
+                <label for="language">Idioma:</label>
+                <select id="language">
+                    <option value="es">Español</option>
+                    <option value="en">Inglés</option>
+                    <option value="fr">Francés</option>
+                </select>
+            </form>
+        </section>
+    
+        <!-- Gestión de Usuarios -->
+        <section class="user-management">
+            <h4>Gestión de Usuarios</h4>
+            <button type="button" class="add-user-btn">Agregar Usuario</button>
+            <ul id="user-list">
+                <li>Admin - Rol: Administrador</li>
+                <li>Editor01 - Rol: Editor</li>
+            </ul>
+        </section>
+    
+        <!-- Seguridad -->
+        <section class="security-settings">
+            <h4>Seguridad</h4>
+            <form>
+                <label for="password-policy">Política de contraseñas:</label>
+                <select id="password-policy">
+                    <option value="default">Contraseña estándar</option>
+                    <option value="strict">Contraseña estricta</option>
+                </select>
+    
+                <label for="2fa">Autenticación de dos factores (2FA):</label>
+                <select id="2fa">
+                    <option value="enabled">Habilitado</option>
+                    <option value="disabled">Deshabilitado</option>
+                </select>
+            </form>
+        </section>
+    
+        <!-- Botón para guardar -->
+        <button type="button" class="save-settings-btn">Guardar Cambios</button>
+    </div>
+    
+    <script src="IntAd.js"></script>
+</body>
+</html>
