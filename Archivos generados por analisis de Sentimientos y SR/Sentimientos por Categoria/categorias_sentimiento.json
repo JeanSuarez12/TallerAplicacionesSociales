@@ -1,0 +1,30 @@
+[
+    {
+        "Categoría":"electronics",
+        "Sentimiento_promedio":0.1209024445,
+        "Productos_positivos":16,
+        "Productos_negativos":0,
+        "Productos_neutros":16
+    },
+    {
+        "Categoría":"gaming_accessories",
+        "Sentimiento_promedio":0.2531541944,
+        "Productos_positivos":190,
+        "Productos_negativos":1,
+        "Productos_neutros":1
+    },
+    {
+        "Categoría":"laptops",
+        "Sentimiento_promedio":0.2918878984,
+        "Productos_positivos":63,
+        "Productos_negativos":2,
+        "Productos_neutros":5
+    },
+    {
+        "Categoría":"pc_peripherals",
+        "Sentimiento_promedio":0.1914045974,
+        "Productos_positivos":62,
+        "Productos_negativos":0,
+        "Productos_neutros":2
+    }
+]

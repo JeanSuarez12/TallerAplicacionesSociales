@@ -1,0 +1,32 @@
+[
+    {
+        "Producto":"HP 14 Laptop, Intel Celeron N4020, 4 GB RAM, 64 GB Storage, 14-inch Micro-edge HD Display, Windows 11 Home, Thin & Portable, 4K Graphics, One Year of Microsoft 365 (14-dq0040nr, Snowflake White)",
+        "Categoría":"laptops",
+        "Sentimiento promedio":-0.065625,
+        "Sentimientos individuales":[
+            -0.196875,
+            0.0,
+            0.0
+        ]
+    },
+    {
+        "Producto":"15.6 Inch Laptop with Office 365, 12GB RAM, 640GB Storage, 5305U Processor, HD Display, Newest Windows 11 Laptops Computer, Wi-Fi 5, Numpad, USB3.0, Type-C, Long Battery Life.",
+        "Categoría":"laptops",
+        "Sentimiento promedio":-0.0555555556,
+        "Sentimientos individuales":[
+            -0.1666666667,
+            0.0,
+            0.0
+        ]
+    },
+    {
+        "Producto":"LISEN Cell Phone Stand Adjustable Phone Holer for Desk, Computer Office Desk Accessories for iPhone 16 Holder Women Kitchen Essentials Fits All Mobile Phones Switch Kindle iPads Tablet 4-10in",
+        "Categoría":"gaming_accessories",
+        "Sentimiento promedio":-0.0053527269,
+        "Sentimientos individuales":[
+            -0.3666666667,
+            0.1366780045,
+            0.2139304813
+        ]
+    }
+]

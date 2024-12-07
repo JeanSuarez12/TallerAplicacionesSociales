@@ -1,0 +1,5 @@
+Categoría,Sentimiento_promedio,Productos_positivos,Productos_negativos,Productos_neutros
+electronics,0.12090244446378964,16,0,16
+gaming_accessories,0.2531541944429418,190,1,1
+laptops,0.29188789838992146,63,2,5
+pc_peripherals,0.19140459744661537,62,0,2
